@@ -4,7 +4,6 @@
 #include <Math/Vector2.h>
 #include <Actor/P.h>
 
-
 // 소코반 게임 레벨.
 class Stair;
 class DrawableActor;
@@ -26,6 +25,8 @@ public:
 
 	void UpdateMap();
 
+	void ProcessCollisionPlayerAndEnemyBullet();
+
 
 private:
 	// 박스를 옮긴 뒤 게임을 클리어했는지 확인하는 함수.
@@ -35,9 +36,12 @@ private:
 	// 계단 액터
 	List<Stair*> map;
 
-	int startMapX = 10;
+	Vector2 fifthFloorPostion = Vector2(0, 0);
 
-	int endMapX = 30;
+
+	int startMapX = 1;
+
+	int endMapX = 22;
 
 	//// 플레이어 액터.
 	P* player = nullptr;
@@ -46,4 +50,8 @@ private:
 
 	// 게임 클리어 변수.
 	bool isGameClear = false;
+
+	bool isPlayerDead = false;
+
+	Vector2 playerDeadPosition;
 };

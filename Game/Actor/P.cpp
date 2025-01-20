@@ -10,6 +10,10 @@ P::P(const Vector2& position, GameLevel* level)
 
 void P::Update(float deltaTime)
 {
+	if (Engine::Get().GetKeyDown(VK_ESCAPE))
+	{
+		Engine::Get().QuitGame();
+	}
 	// »óÇÏÁÂ¿ì.
 	if (Engine::Get().GetKeyDown(VK_LEFT))
 	{

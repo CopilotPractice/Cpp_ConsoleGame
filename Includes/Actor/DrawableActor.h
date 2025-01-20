@@ -9,7 +9,6 @@ class ENGINE_API DrawableActor : public Actor
 
 public:
 	DrawableActor(const char* image = "");
-	//virtual ~DrawableActor() = default;
 	virtual ~DrawableActor();
 
 	virtual void Draw() override;

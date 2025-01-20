@@ -14,6 +14,8 @@ DrawableActor::DrawableActor(const char* image)
 	width = (int)strlen(image);
 }
 
+
+
 DrawableActor::~DrawableActor()
 {
 	delete[] image;

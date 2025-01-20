@@ -2,7 +2,7 @@
 #include "Timer.h"
 
 Timer::Timer(float setTime)
-	: setTime(setTime)
+	: setTime(setTime), elapsedTime(0.0f)
 {
 }
 
