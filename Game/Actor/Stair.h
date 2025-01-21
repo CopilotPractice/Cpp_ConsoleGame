@@ -13,6 +13,7 @@ public:
 
 	inline int GetFloor() { return this->floor; }
 
+
 private:
 	int floor = 0;
 };

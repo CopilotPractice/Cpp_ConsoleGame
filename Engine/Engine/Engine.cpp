@@ -75,7 +75,7 @@ Engine::~Engine()
 	delete renderTargets[1];
 }
 
-void Engine::Run()
+void Engine::Run()                           // Todo 김찬회 : quit 만나면 프로그램 종료 말고, 재시작 가능 하도록
 {
 	// 시작 타임 스탬프 저장.
 	// timeGetTime 함수는 밀리세컨드(1/1000초) 단위.
@@ -104,12 +104,20 @@ void Engine::Run()
 	//float targetOneFrameTime = 1.0f / targetFrameRate;
 
 	// Game-Loop.
-	while (true)
+	while (true)      //Todo : 엔진 수정 : 김찬회       = 상대경로로 입력해야됨
 	{
 		// 종료 조건.
-		if (quit)
-		{
-			break;
+		if (quit){
+			while (true) {
+				ProcessInput();
+				if (Engine::Get().GetKeyDown(VK_RETURN)) {
+					system("C:/Workspace/PersnalProjectOne/Bin/x64/Debug/Game/Game.exe");
+					break;
+				}
+			}
+			
+			//break;
+			//continue;
 		}
 
 		// 현재 프레임 시간 저장.

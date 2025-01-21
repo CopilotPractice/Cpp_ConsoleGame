@@ -4,6 +4,7 @@
 
 Level::Level()
 {
+	
 }
 
 Level::~Level()
@@ -47,6 +48,7 @@ void Level::ProcessAddedAndDestroyedActor()
 
 void Level::Update(float deltaTime)
 {
+	
 	// 레벨에 포함된 액터를 순회하면서 Update 함수 호출.
 	for (Actor* actor : actors)
 	{
@@ -62,6 +64,7 @@ void Level::Update(float deltaTime)
 
 void Level::Draw()
 {
+	
 	
 	// 레벨에 포함된 액터를 순회하면서 Draw 함수 호출.
 	for (Actor* actor : actors)

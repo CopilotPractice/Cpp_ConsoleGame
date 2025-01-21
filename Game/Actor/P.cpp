@@ -2,10 +2,13 @@
 #include <Engine/Engine.h>
 #include <Level/GameLevel.h>
 
+
+class Stair;
 P::P(const Vector2& position, GameLevel* level)
 	:DrawableActor("P"), refLevel(level)
 {
 	this->position = position;
+
 }
 
 void P::Update(float deltaTime)
@@ -20,25 +23,26 @@ void P::Update(float deltaTime)
 		 //이동 가능한지 확인.
 		if (refLevel->CanPlayerMove(Vector2(position.x - 4, position.y)))
 		{
+			refLevel->CheckGameOver();
 			refLevel->UpdateMap();
 			position.x -= 3;	
+			//refLevel->CheckGameOver();
 		}
-
-		/*position.x -= 1;
-		position.x = position.x < 0 ? 0 : position.x;*/
 	}
 
 	if (Engine::Get().GetKeyDown(VK_RIGHT))
 	{
 		// 이동 가능한지 확인.
 		if (refLevel->CanPlayerMove(Vector2(position.x + 2, position.y)))
-		{	
-			
+		{
+			refLevel->CheckGameOver();
 			refLevel->UpdateMap();
 			position.x += 3;
+
+			
 			/*position.x += 3;
 			position.y -= 1;*/
-			
+
 		}
 	}
 }

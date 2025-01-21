@@ -195,6 +195,7 @@
     <ClInclude Include="Actor\P.h" />
     <ClInclude Include="Actor\Stair.h" />
     <ClInclude Include="Actor\Wall.h" />
+    <ClInclude Include="Level\GameLevel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

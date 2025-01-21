@@ -13,6 +13,7 @@ enum class Color : unsigned short
 	Red = FOREGROUND_RED,
 	Green = FOREGROUND_GREEN,
 	Blue = FOREGROUND_BLUE,
+	Gray = FOREGROUND_INTENSITY,
 	White = Red + Green + Blue,
 };
 
