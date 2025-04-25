@@ -28,7 +28,6 @@ https://github.com/user-attachments/assets/720d525c-6ef7-482a-9bfb-1ffcb3ec964a
 
 
 ## 프로젝트 세부 과정
-### 프로젝트 기획
 ## 1. 오브젝트 기획
 
 ### ▶️ 플레이어 (`"P"`)
